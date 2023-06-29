@@ -1,4 +1,5 @@
-import { createRectangles } from "./rectangle-module"
+import { createRectangles } from "./rectangle-module";
+import './index.css';
 
 // This plugin will open a window to prompt the user to enter a number, and
 // it will then create that many rectangles on the screen.
