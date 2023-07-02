@@ -1,17 +1,13 @@
 {
-  "name": "hummingbird",
-  "id": "1255579996394045278",
-  "api": "1.0.0",
-  "main": "dist/code.js",
-  "capabilities": [],
-  "enableProposedApi": false,
-  "editorType": [
-    "figma"
-  ],
-  "ui": "./dist/ui.html",
-  "networkAccess": {
-    "allowedDomains": [
-      "none"
-    ]
-  }
+	"name": "hummingbird",
+	"id": "1255579996394045278",
+	"api": "1.0.0",
+	"main": "dist/code.js",
+	"ui": "./dist/ui.html",
+	"capabilities": [],
+	"enableProposedApi": false,
+	"editorType": ["figma"],
+	"networkAccess": {
+		"allowedDomains": ["none"]
+	}
 }

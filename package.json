@@ -1,28 +1,33 @@
 {
-  "name": "hummingbird",
-  "version": "1.0.0",
-  "description": "Your Figma Plugin",
-  "main": "dist/code.js",
-  "scripts": {
-    "build": "webpack",
-    "watch": "npm run build -- --watch",
-    "tailwind": "postcss ./main.css -o ./tailwind.css --watch",
-    "dev": "vite"
-  },
-  "author": "",
-  "license": "",
-  "devDependencies": {
-    "@figma/plugin-typings": "*",
-    "autoprefixer": "^10.4.14",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.8.1",
-    "postcss": "^8.4.24",
-    "postcss-cli": "^10.1.0",
-    "style-loader": "^3.3.3",
-    "tailwindcss": "^3.3.2",
-    "ts-loader": "^9.4.3",
-    "typescript": "^5.1.5",
-    "webpack": "^5.88.0",
-    "webpack-cli": "^5.1.4"
-  }
+	"name": "hummingbird",
+	"version": "1.0.0",
+	"description": "Your Figma Plugin",
+	"main": "dist/code.js",
+	"scripts": {
+		"build": "webpack",
+		"watch": "npm run build -- --watch",
+		"tailwind": "postcss ./main.css -o ./src/tailwind.css --watch",
+		"dev": "vite"
+	},
+	"author": "",
+	"license": "",
+	"devDependencies": {
+		"@figma/plugin-typings": "*",
+		"autoprefixer": "^10.4.14",
+		"copy-webpack-plugin": "^11.0.0",
+		"css-loader": "^6.8.1",
+		"extract-loader": "^5.1.0",
+		"html-loader": "^4.2.0",
+		"html-webpack-plugin": "^5.5.3",
+		"mini-css-extract-plugin": "^2.7.6",
+		"postcss": "^8.4.24",
+		"postcss-cli": "^10.1.0",
+		"prettier": "^2.8.8",
+		"style-loader": "^3.3.3",
+		"tailwindcss": "^3.3.2",
+		"ts-loader": "^9.4.3",
+		"typescript": "^5.1.5",
+		"webpack": "^5.88.0",
+		"webpack-cli": "^5.1.4"
+	}
 }
