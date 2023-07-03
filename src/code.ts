@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 // import './tailwind.css';
 
 // This file holds the main code for the plugins. It has access to the *document*.

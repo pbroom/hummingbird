@@ -26,16 +26,10 @@ module.exports = (env, argv) => ({
 			// Load HTML files and handle their sources
 			{
 				test: /\.html$/i,
-				loader: 'html-loader',
+				loader: 'handlebars-loader',
 				options: {
-					sources: {
-						list: [
-							{
-								tag: 'style',
-								attribute: 'data-src',
-								type: 'src',
-							},
-						],
+					data: {
+						tailwind: require('fs').readFileSync('./src/tailwind.css', 'utf8'),
 					},
 				},
 			},
@@ -44,6 +38,7 @@ module.exports = (env, argv) => ({
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
 			},
+			// { test: /\.handlebars$/, loader: 'handlebars-loader' },
 		],
 	},
 
