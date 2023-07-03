@@ -6,7 +6,7 @@ module.exports = function (plop) {
 		actions: [
 			{
 				type: 'modify',
-				path: 'src/ui.html',
+				path: 'dist/ui.html',
 				transform: function (fileContents) {
 					// Remove the existing <style> tags and their content
 					const removedStyleContents = fileContents.replace(

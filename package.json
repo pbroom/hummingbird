@@ -5,7 +5,8 @@
 	"main": "dist/code.js",
 	"scripts": {
 		"build": "webpack --mode=production",
-		"watch": "npm run build -- --watch",
+		"watch": "onchange 'src/ui.html' 'src/tailwind.css' -- npm-run-all --sequential build update-css",
+		"update-css": "plop update-css",
 		"tailwind": "postcss ./main.css -o ./src/tailwind.css --watch",
 		"dev": "vite"
 	},
@@ -21,6 +22,8 @@
 		"html-loader": "^4.2.0",
 		"html-webpack-plugin": "^5.5.3",
 		"mini-css-extract-plugin": "^2.7.6",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
 		"plop": "^3.1.2",
 		"postcss": "^8.4.24",
 		"postcss-cli": "^10.1.0",
