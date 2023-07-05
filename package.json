@@ -4,7 +4,7 @@
 	"description": "Your Figma Plugin",
 	"main": "dist/code.js",
 	"scripts": {
-		"build": "webpack --mode=production",
+		"build": "webpack",
 		"watch": "onchange 'src/ui.html' 'src/tailwind.css' -- npm-run-all --sequential build update-css",
 		"update-css": "plop update-css",
 		"tailwind": "postcss ./main.css -o ./src/tailwind.css --watch",
@@ -13,7 +13,12 @@
 	"author": "",
 	"license": "",
 	"devDependencies": {
+		"@babel/cli": "^7.22.6",
+		"@babel/core": "^7.22.6",
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+		"@babel/preset-env": "^7.22.6",
 		"@figma/plugin-typings": "*",
+		"@material/material-color-utilities": "^0.2.7",
 		"autoprefixer": "^10.4.14",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.8.1",

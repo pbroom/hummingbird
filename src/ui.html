@@ -4,15 +4,14 @@
 
 <body class="bg-black">
 	<div class="p-5 text-white">
-		<h2 class="mb-4">Dynamic Tones</h2>
 		<form class="flex flex-col gap-4">
 			<div>
-				<label class="text-sm"> Color Name </label>
+				<label class="text-sm">Color Name</label>
 				<input
 					id="name"
 					type="text"
 					placeholder="poetic orange"
-					class="my-1 border border-slate-200/50 hover:border-slate-200 bg-transparent rounded-lg p-2 w-full text-sm"
+					class="my-1 focus-visible:outline-none focus-visible:ring-slate-200 focus-visible:ring-2 focus-visible:border-slate-200 transition-colors duration-100 border placeholder:text-gray-500/75 border-slate-200/50 hover:border-slate-200 bg-transparent rounded-lg p-2 w-full text-sm"
 				/>
 				<div class="text-xs text-slate-400">
 					Based on the input name, tones will be named something like
@@ -24,12 +23,12 @@
 				</div>
 			</div>
 			<div>
-				<label class="text-sm"> Hex Color </label>
+				<label class="text-sm">Hex Color</label>
 				<input
 					id="color"
 					type="text"
 					placeholder="#000000"
-					class="my-1 border border-slate-200/50 hover:border-slate-200 bg-transparent rounded-lg p-2 w-full text-sm"
+					class="my-1 focus-visible:outline-none focus-visible:ring-slate-200 focus-visible:ring-2 focus-visible:border-slate-200 transition-colors duration-100 border placeholder:text-gray-500/75 border-slate-200/50 hover:border-slate-200 bg-transparent rounded-lg p-2 w-full text-sm"
 				/>
 				<div class="text-xs text-slate-400">
 					Input a hex color to generate tones 0-100
@@ -38,7 +37,7 @@
 			<button
 				id="create-tones"
 				type="button"
-				class="bg-slate-100 text-slate-800 text-sm rounded-lg px-4 py-2 mt-3 hover:bg-white hover:text-slate-700 active:bg-slate-100"
+				class="bg-slate-50 text-slate-800 text-sm rounded-lg px-4 py-2 mt-3 hover:bg-slate-200 active:bg-slate-300"
 			>
 				Make it so
 			</button>
