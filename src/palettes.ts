@@ -19,14 +19,16 @@ export interface PaletteProps {
 	toneStops?: number[];
 }
 
-// const materialColorUtilities = await import('@material/material-color-utilities');
+// const materialColorUtilities = await import(
+// 	'@material/material-color-utilities'
+// );
 
 export const createPalette = ({
 	hexColor,
 	paletteName = defaultPaletteName,
 	toneStops = defaultPaletteTones,
 }: PaletteProps) => {
-	// const { TonalPalette, Hct } = await materialColorUtilities;
+	// const { TonalPalette, Hct } = materialColorUtilities;
 
 	// Convert hex to Hct
 	const hctColor = Hct.fromInt(parseInt(hexColor.slice(1), 16));
@@ -41,10 +43,10 @@ export const createPalette = ({
 		toneStops,
 	};
 	// Generate tones for each color
-	const cssVariables = toneStops.map((tone) => {
-		const argb = paletteColor.tone(tone);
-		const hex = hexFromArgb(argb);
-		const variableName = `--${paletteName}-${tone}`;
+	const cssVariables: string[] = toneStops.map((tone: number) => {
+		const argb: number = paletteColor.tone(tone);
+		const hex: string = hexFromArgb(argb);
+		const variableName: string = `--${paletteName}-${tone}`;
 		return `${variableName}: ${hex};`;
 	});
 	return cssVariables.join('\n');

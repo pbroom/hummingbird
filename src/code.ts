@@ -1,4 +1,4 @@
-import { defaultPaletteName, defaultPaletteTones, PaletteProps, createPalette, PaletteRgbaProps, createPaletteRgba } from "./palettes";
+import { createPalette } from './palettes';
 
 // This file holds the main code for the plugins. It has access to the *document*.
 // You can access browser APIs in the <script> tag inside "ui.html" which has a
@@ -9,12 +9,14 @@ figma.showUI(__html__);
 figma.ui.resize(320, 400);
 
 figma.ui.onmessage = (pluginMessage) => {
-	const palette = createPalette({
-  		hexColor: pluginMessage.color,
-  		paletteName: pluginMessage,
+	const hexColor = pluginMessage.color != '' ? pluginMessage.color : '#000000';
+	const paletteName = pluginMessage.name != '' ? pluginMessage.name : 'color';
+
+	createPalette({
+		hexColor,
+		paletteName,
 	});
 
-	// console.log(palette);
 	console.log(pluginMessage.type);
 	console.log(pluginMessage.color);
 	console.log(pluginMessage.name);

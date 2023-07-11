@@ -23,13 +23,27 @@ module.exports = (env, argv) => ({
 				use: 'ts-loader',
 				exclude: /node_modules/,
 			},
-            {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
+			// Transpile JavaScript code with Babel
+			{
+				test: /\.js$/,
+				// exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [
+							[
+								'@babel/preset-env',
+								{
+									targets: {
+										ie: '11',
+									},
+								},
+							],
+						],
+						plugins: ['@babel/plugin-proposal-nullish-coalescing-operator'],
+					},
+				},
+			},
 			// Load HTML files and handle their sources
 			{
 				test: /\.html$/i,
